@@ -1,0 +1,31 @@
+.orders {
+    padding: 20px 80px;
+}
+
+.orders > h1 {
+    margin: 30px 0px;
+}
+
+/* Responsive styles for screens less than or equal to 768px (typically tablets) */
+@media only screen and (max-width: 768px) {
+    .orders {
+        padding: 20px 40px;
+    }
+
+    .orders > h1 {
+        margin: 20px 0px;
+        font-size: 24px; /* Decreasing font-size for smaller screens */
+    }
+}
+
+/* Responsive styles for screens less than or equal to 480px (typically mobile phones) */
+@media only screen and (max-width: 480px) {
+    .orders {
+        padding: 10px 20px;
+    }
+
+    .orders > h1 {
+        margin: 15px 0px;
+        font-size: 20px; /* Further decreasing font-size for mobile screens */
+    }
+}

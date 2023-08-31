@@ -1,0 +1,118 @@
+.checkoutProduct {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.checkoutProduct_image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+    margin-right: 10px;
+}
+
+.checkoutProduct_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.checkoutProduct_title {
+    font-size: 17px;
+    font-weight: 800;
+    max-height: 60px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.checkoutProduct_details {
+    display: flex;
+    align-items: center;
+}
+
+.checkoutProduct_price {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.checkoutProduct_rating {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.checkoutProduct_rating > p {
+    margin: 0;
+}
+
+.checkoutProduct_info > button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    height: 30px;
+    width: 150px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.checkoutProduct_info > button:hover {
+    background-color: #e5a842;
+}
+
+.checkoutProduct_info > button:active {
+    background-color: #c2a439;
+    border-color: #7a5b21; 
+    transform: scale(0.95); 
+    transition: transform 0.1s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .checkoutProduct {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkoutProduct_image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .checkoutProduct_info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .checkoutProduct_price, .checkoutProduct_rating {
+        align-self: center;
+    }
+    
+    .checkoutProduct_info > button {
+        width: 150px;
+        margin: 10px auto;
+    }
+
+    .checkoutProduct_title {
+        font-size: 15px;
+    }
+}
+
+/* Responsive styles for screens less than or equal to 480px (typically mobile phones) */
+@media only screen and (max-width: 480px) {
+    .checkoutProduct_image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .checkoutProduct_title {
+        font-size: 14px;
+    }
+}

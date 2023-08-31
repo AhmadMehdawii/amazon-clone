@@ -1,0 +1,53 @@
+.order {
+    padding: 40px;
+    margin: 20px 0px;
+    border: 1px solid lightgray;
+    background-color: white;
+    position: relative;
+}
+
+.order_id {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+.order_total {
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Responsive styles for screens less than or equal to 768px (typically tablets) */
+@media only screen and (max-width: 768px) {
+    .order {
+        padding: 20px;
+    }
+
+    .order_id {
+        font-size: 12px;
+        top: 30px;
+        right: 10px;
+    }
+
+    .order_total {
+        font-size: 16px;
+    }
+}
+
+/* Responsive styles for screens less than or equal to 480px (typically mobile phones) */
+@media only screen and (max-width: 480px) {
+    .order {
+        padding: 10px;
+        margin: 10px 0px;
+    }
+
+    .order_id {
+        font-size: 10px;
+        top: 20px;
+        right: 5px;
+    }
+
+    .order_total {
+        font-size: 14px;
+    }
+}

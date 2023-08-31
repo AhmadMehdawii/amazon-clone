@@ -1,0 +1,61 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    max-height: 400px;
+    min-width: 100px;
+    background-color: white;
+    z-index: 1;
+}
+
+.product > img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product_info {
+    height: 100px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.product_title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product_price {
+    margin-top: 5px;
+}
+
+.product > button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+
+.product > button:hover {
+    background-color: #ddb347; /* Darkening the color a bit for the hover effect */
+    border-color: #896b25; /* Adjusting the border color for hover */
+    cursor: pointer; /* Changing the cursor to indicate a clickable button */
+    transition: background-color 0.3s ease-in-out; /* Optional: for a smooth transition effect */
+}
+
+.product > button:active {
+    background-color: #c2a439; /* Darkening the color more for the active/pressed effect */
+    border-color: #7a5b21; /* Adjusting the border color for active state */
+    transform: scale(0.95); /* Shifting the button slightly */
+    transition: transform 0.1s ease-in-out; /* Optional: for a smooth transition effect */
+}
+
+.product_rating {
+    display: flex;
+}

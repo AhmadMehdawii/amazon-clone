@@ -1,0 +1,227 @@
+.header-links-container {
+    width: 100%;  /* Set this to your desired width */
+    height: 0;  /* Starts from 0 */
+    background-color: #131921;
+    position: fixed;
+    top: 4.01rem;
+    left: 0rem;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* So the content is clipped */
+    z-index: 4;
+    transition: height 0.5s, opacity 0.5s;  /* Height transition added */
+
+    .header-links {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.change {
+    opacity: 1;
+    height: 250px;  
+}
+
+    
+  .hamburger {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    text-align: center;
+    z-index: 100;
+  
+    &__icon {
+      position: relative;
+      margin-top: 1.5rem;
+  
+      &,
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+      }
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+  
+      &::before {
+        top: -0.8rem;
+      }
+      &::after {
+        top: 0.8rem;
+      }
+    }
+  
+    &-active &__icon {
+      background-color: transparent;
+    }
+  
+    &-active &__icon::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+  
+    &-active &__icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  
+.hamburger {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    top: 0.6rem;
+    right: 1rem;
+    cursor: pointer;
+    text-align: center;
+    z-index: 100;
+  
+    &__icon {
+      position: relative;
+      margin-top: 1.5rem;
+  
+      &,
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+      }
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+  
+      &::before {
+        top: -0.8rem;
+      }
+      &::after {
+        top: 0.8rem;
+      }
+    }
+  
+    &-active &__icon {
+      background-color: transparent;
+    }
+  
+    &-active &__icon::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+  
+    &-active &__icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+  
+  .hamburger__icon {
+    position: relative;
+    margin-top: 1.5rem;
+    width: 2rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  
+  .hamburger__icon::before,
+  .hamburger__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.2s;
+  }
+  
+  .hamburger__icon::before {
+    top: -0.8rem;
+  }
+  
+  .hamburger__icon::after {
+    top: 0.8rem;
+  }
+  
+  .hamburger-active .hamburger__icon {
+    background-color: transparent;
+  }
+  
+  .hamburger-active .hamburger__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  
+  .hamburger-active .hamburger__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  .header__option {
+    padding: 1rem;
+    background-color: #131921;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+
+.header__option:hover {
+    background-color: #2a2a3a;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #131921;
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.header__optionBasket:hover {
+    background-color: #2a2a3a;
+}
+
+.header__basketCount {
+    margin-left: 0.5rem;
+}
+
+.header-links a, 
+.header-links a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-links a::before, 
+.header-links a::after, 
+.header-links a:visited::before, 
+.header-links a:visited::after {
+    content: none;
+}

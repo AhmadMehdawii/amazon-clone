@@ -1,0 +1,50 @@
+.checkout {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+}
+
+.checkout_ad {
+    width: 70%;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+.checkout_title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout_right {
+    display: flex;
+    margin: 0 auto 20px auto;  /* Top and bottom margins are set, while left and right are auto to center the div */
+}
+.checkout_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 20px auto;  /* Top and bottom margins are set, while left and right are auto to center the div */
+}
+
+@media (max-width: 768px) {
+    .checkout {
+        flex-direction: column;  /* Stack children vertically */
+    }
+
+    .checkout_left {
+        width: 100%;  /* Make both sections take full width */
+        margin-bottom: 20px;  /* Add some spacing between sections */
+    }
+
+    .checkout_right {
+        display: flex;
+        width: 70%;  /* Assuming .checkout_title's margin and padding apply to its total width */
+        margin: 0 auto 20px auto;
+    }
+
+    .checkout_ad {
+        display: none;  /* Optionally, you can hide the ad for smaller screens */
+    }
+}
