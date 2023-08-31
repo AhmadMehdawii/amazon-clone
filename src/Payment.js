@@ -42,6 +42,12 @@ function Payment() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!user) {
+      setError("You need to be signed in to complete the payment.");
+      return;
+    }
+
     setProcessing(true);
 
     const payload = await stripe
@@ -88,6 +94,8 @@ function Payment() {
 
   return (
     <div className="payment">
+      {/* Show error at the top if it exists */}
+      {error && <div className="payment_error">{error}</div>}
       <div className="payment_container">
         <h1>
           Checkout (<Link to="/checkout">{basket?.length} items</Link>)

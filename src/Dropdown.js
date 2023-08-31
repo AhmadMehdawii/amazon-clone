@@ -11,6 +11,12 @@ const Dropdown = ({ handleAuthentication, user, basket }) => {
     setActive((prev) => !prev);
   };
 
+  const logout = () => {
+    // Perform logout logic here if needed
+    handleAuthentication(null);
+    setActive(false);
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -33,9 +39,15 @@ const Dropdown = ({ handleAuthentication, user, basket }) => {
       </div>
       <div className={`header-links-container ${isActive ? "change" : ""}`}>
         <div className="header-links">
-          <a href="/" onClick={() => setActive(false)}>
-            <div className="header__option">Main Page</div>
-          </a>
+          {user ? (
+            <div className="header__option" onClick={logout}>
+              Log out
+            </div>
+          ) : (
+            <a href="/Login" onClick={() => setActive(false)}>
+              <div className="header__option">Log in</div>
+            </a>
+          )}
           <Link to="/orders" onClick={() => setActive(false)}>
             <div className="header__option">Returns & Orders</div>
           </Link>

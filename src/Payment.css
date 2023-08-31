@@ -10,6 +10,23 @@
     border-bottom: 1px solid lightgray;
 }
 
+.payment_error {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.payment_priceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   
+  }
+
 .payment_container > h1 a {
     text-decoration: none;
 }
@@ -78,3 +95,40 @@
         margin-left: 5%; /* Center the button by using left margin */
     }
 }
+
+/* 1: Large screens (max-width: 1600px) */
+@media only screen and (max-width: 1600px) {
+    .payment_priceContainer {
+      /* Your styles here */
+    }
+  }
+  
+  /* 2: Medium-Large screens (min-width: 992px) and (max-width: 1599px) */
+  @media only screen and (min-width: 992px) and (max-width: 1599px) {
+    .payment_priceContainer {
+      /* Your styles here */
+    }
+  }
+  
+  /* 3: Medium screens (min-width: 767px) and (max-width: 991px) */
+  @media only screen and (min-width: 767px) and (max-width: 991px) {
+    .payment_priceContainer {
+      /* Your styles here */
+    }
+  }
+  
+  /* 4: Small-Medium screens (min-width: 623px) and (max-width: 766px) */
+  @media only screen and (min-width: 623px) and (max-width: 766px) {
+    .payment_priceContainer {
+      flex-direction: column;
+      /* Your styles here */
+    }
+  }
+  
+  /* 5: Small screens (max-width: 623px) */
+  @media only screen and (max-width: 623px) {
+    .payment_priceContainer {
+      flex-direction: column;
+      /* Your styles here */
+    }
+  }
